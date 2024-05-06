@@ -1,0 +1,11 @@
+---
+- name: ilovenano
+  hosts: linux
+  become: true
+  tasks:
+    - name: ensure nano is there
+      apt:
+      #stat:
+        name: nano
+        state: latest
+        #register: register_name

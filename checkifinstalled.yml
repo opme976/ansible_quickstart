@@ -1,0 +1,12 @@
+---
+- name: Check if a program is installed
+  hosts: linux
+  become: true
+  tasks:
+    - name: Check if a program is installed
+      shell: |
+        ansible --version > /dev/null 2>&1
+      register: check_program
+
+    - debug: var=check_program.stdout
+#test
