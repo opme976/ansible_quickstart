@@ -1,5 +1,5 @@
 ---
-- name: Check if a program is installed
+- name: 
   hosts: linux
   become: true
   tasks:
